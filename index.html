@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Framework: Gestão Hardcore (Metodologia Elon Musk) - Silvanio Gois</title>
+    <!-- Carrega Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Define a fonte Inter e a cor primária -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            --color-primary: rgb(39, 98, 141);
+            scroll-behavior: smooth;
+        }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-primary { color: var(--color-primary); }
+        .border-primary { border-color: var(--color-primary); }
+        /* Transição para os colapsáveis */
+        .collapse-content {
+            transition: all 0.3s ease-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        .collapse-content.active {
+            max-height: 5000px;
+        }
+        .rotate-90 {
+            transform: rotate(90deg);
+        }
+        .progress-bar {
+            height: 6px;
+            background-color: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background-color: var(--color-primary);
+            transition: width 0.3s ease;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Cabeçalho (Header) -->
+<header class="bg-primary text-white shadow-xl sticky top-0 z-50" id="top">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-col md:flex-row justify-between items-center">
+        <!-- Título e Perfil -->
+        <div class="flex items-center space-x-4">
+            <!-- Foto de Perfil RESTAURADA -->
+            <img src="Executivo_Silvanio_Gestor.png" alt="Foto de Silvanio Gois" class="w-16 h-16 rounded-full border-2 border-white object-cover">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold">Framework: Gestão Hardcore</h1>
+                <p class="text-sm opacity-90 mt-1">Metodologia Elon Musk - por Silvanio Gois</p>
+            </div>
+        </div>
+        
+        <!-- Contato -->
+        <a href="https://wa.me/5513988301094?text=Olá! Tudo bem?" target="_blank" class="mt-4 md:mt-0 px-4 py-2 bg-white text-primary rounded-lg font-semibold hover:bg-gray-200 transition duration-300 shadow-md flex items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10c0 3.866-3.582 7-8 7a8.841 8.841 0 01-4.083-.98L2 17l1.338-3.123C2.493 12.767 2 11.434 2 10c0-3.866 3.582-7 8-7s8 3.134 8 7zM7 9H5v2h2V9zm8 0h-2v2h2V9zM9 9h2v2H9V9z" clip-rule="evenodd" />
+            </svg>
+            Contato
+        </a>
+    </div>
+</header>
+
+    <!-- Conteúdo Principal (Main Content) -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
+        <!-- Introdução -->
+        <section class="mb-12 p-6 bg-white rounded-xl shadow-lg border-l-4 border-primary fade-in">
+            <h2 class="text-2xl font-bold text-primary mb-4">Introdução: A Gestão como Engenharia Reversa</h2>
+            <p class="text-lg mb-4">Este framework prático estrutura a gestão de cultura e execução de forma não-acadêmica, focando nos parâmetros que tratam a empresa como uma <strong>máquina</strong> a ser otimizada. A metodologia é organizada em torno da eliminação radical de complexidade e burocracia (o Ruído), priorizando a velocidade de aprendizado (Iteração).</p>
+            
+            <!-- NOVO: Casos Reais de Aplicação -->
+            <div class="mt-6 p-4 bg-blue-50 rounded-lg">
+                <h3 class="font-bold text-lg text-primary mb-2"> Casos Reais de Aplicação</h3>
+                <ul class="list-disc ml-5 space-y-2">
+                    <li><strong>Tesla Model 3 Production Hell:</strong> Musk dormiu na fábrica para resolver gargalos de produção pessoalmente</li>
+                    <li><strong>SpaceX Falcon 1:</strong> 3 falhas antes do sucesso - cada falha acelerou o aprendizado</li>
+                    <li><strong>Cybertruck:</strong> Eliminação de processos convencionais para criar um veículo radicalmente diferente</li>
+                    <li><strong>Giga Press:</strong> Substituição de 70 peças por 1 única peça fundida</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO: Diagnóstico Rápido -->
+        <section class="mb-12 p-6 bg-white rounded-xl shadow-lg fade-in">
+            <h2 class="text-2xl font-bold text-primary mb-4"> Diagnóstico Rápido: Avalie Sua Empresa</h2>
+            <p class="text-gray-600 mb-6">Responda estas questões para identificar onde aplicar os princípios Musk e receba um plano personalizado:</p>
+            
+            <div class="space-y-8">
+                <div>
+                    <p class="font-medium mb-3 text-lg">1. Quantas camadas hierárquicas existem entre você e o funcionário de nível mais baixo?</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="diagnostic-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition flex-1 min-w-[120px]" data-value="1" data-question="1">
+                            <span class="font-semibold">1-2</span>
+                            <p class="text-xs mt-1 text-gray-600">Estrutura enxuta</p>
+                        </button>
+                        <button class="diagnostic-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition flex-1 min-w-[120px]" data-value="2" data-question="1">
+                            <span class="font-semibold">3-4</span>
+                            <p class="text-xs mt-1 text-gray-600">Estrutura média</p>
+                        </button>
+                        <button class="diagnostic-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition flex-1 min-w-[120px]" data-value="3" data-question="1">
+                            <span class="font-semibold">5+</span>
+                            <p class="text-xs mt-1 text-gray-600">Estrutura complexa</p>
+                        </button>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="font-medium mb-3 text-lg">2. Qual a taxa de aprovações necessárias para uma decisão de média importância?</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="diagnostic-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition flex-1 min-w-[120px]" data-value="1" data-question="2">
+                            <span class="font-semibold">1 pessoa</span>
+                            <p class="text-xs mt-1 text-gray-600">Decisão ágil</p>
+                        </button>
+                        <button class="diagnostic-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition flex-1 min-w-[120px]" data-value="2" data-question="2">
+                            <span class="font-semibold">2-3 pessoas</span>
+                            <p class="text-xs mt-1 text-gray-600">Aprovação moderada</p>
+                        </button>
+                        <button class="diagnostic-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition flex-1 min-w-[120px]" data-value="3" data-question="2">
+                            <span class="font-semibold">Comitê</span>
+                            <p class="text-xs mt-1 text-gray-600">Burocracia alta</p>
+                        </button>
+                    </div>
+                </div>
+                
+                <div>
+                    <p class="font-medium mb-3 text-lg">3. Quanto tempo leva desde uma ideia até seu primeiro teste prático?</p>
+                    <div class="flex flex-wrap gap-3">
+                        <button class="diagnostic-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition flex-1 min-w-[120px]" data-value="1" data-question="3">
+                            <span class="font-semibold">Dias</span>
+                            <p class="text-xs mt-1 text-gray-600">Iteração rápida</p>
+                        </button>
+                        <button class="diagnostic-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition flex-1 min-w-[120px]" data-value="2" data-question="3">
+                            <span class="font-semibold">Semanas</span>
+                            <p class="text-xs mt-1 text-gray-600">Velocidade média</p>
+                        </button>
+                        <button class="diagnostic-btn px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition flex-1 min-w-[120px]" data-value="3" data-question="3">
+                            <span class="font-semibold">Meses+</span>
+                            <p class="text-xs mt-1 text-gray-600">Lentidão crítica</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl border border-blue-200 hidden" id="diagnostic-result">
+                <h3 class="font-bold text-2xl text-primary mb-3"> Resultado do Diagnóstico</h3>
+                <p id="result-text" class="text-lg mb-4"></p>
+                <div class="mb-2 flex justify-between text-sm font-medium">
+                    <span>Progresso da Implementação</span>
+                    <span id="progress-text">0%</span>
+                </div>
+                <div class="progress-bar mb-6">
+                    <div id="progress-fill" class="progress-fill" style="width: 0%"></div>
+                </div>
+                <div id="recommendations" class="space-y-3"></div>
+            </div>
+        </section>
+
+        <!-- Seção I: Cultura e Alinhamento -->
+        <section class="mb-12 border-b border-gray-300 pb-4 fade-in">
+            <button onclick="toggleSection('section1')" class="w-full text-left flex justify-between items-center text-2xl md:text-3xl font-bold text-gray-700 hover:text-primary transition duration-300 py-4">
+                <h2 class="flex items-center">
+                    <span class="mr-3"></span>
+                    I. Cultura: Special Forces (O Mindset)
+                </h2>
+                <span id="arrow1" class="transition-transform duration-300 text-primary text-2xl">&gt;</span>
+            </button>
+            
+            <div id="section1" class="collapse-content active pt-4">
+                <div class="grid md:grid-cols-2 gap-8">
+                    
+                    <!-- Card 1: Soma de Vetores -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100">
+                        <div class="text-2xl font-bold text-primary mb-3 flex items-center">
+                            <span class="mr-3"></span> 
+                            <span>1. Soma de Vetores</span>
+                        </div>
+                        <p class="font-semibold mb-3 text-gray-700 bg-blue-50 p-2 rounded-lg">KPI: Alinhamento da Energia da Equipe</p>
+                        <p class="text-gray-600 mb-4">Avalia se o talento e o esforço (Magnitude) de cada colaborador estão apontando para o objetivo <strong>único</strong> da empresa (Direção). Se a soma resultante dos vetores é zero (talentos se anulando com agendas próprias), a ineficiência é máxima. Prioriza 5 pessoas alinhadas sobre 10 gênios desalinhados.</p>
+                        
+                        <!-- MELHORIA: Exemplo Prático -->
+                        <div class="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-primary flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                                Exemplo Prático:
+                            </h4>
+                            <p class="text-sm">Na SpaceX, todos os engenheiros - independentemente de sua especialidade - têm como objetivo principal reduzir o custo por quilograma em órbita. Isso direciona todas as decisões de design.</p>
+                        </div>
+                        
+                        <!-- MELHORIA: Ferramenta de Implementação -->
+                        <div class="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-primary flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                Como Implementar:
+                            </h4>
+                            <ul class="list-disc ml-5 text-sm space-y-1">
+                                <li>Crie um "North Star Metric" único para toda a empresa</li>
+                                <li>Revise todas as decisões contra esta métrica</li>
+                                <li>Remova projetos que não contribuem diretamente</li>
+                                <li>Estabeleça recompensas por contribuição ao objetivo comum</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Urgência Maníaca -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border border-gray-100">
+                        <div class="text-2xl font-bold text-primary mb-3 flex items-center">
+                            <span class="mr-3"></span> 
+                            <span>2. Urgência Maníaca</span>
+                        </div>
+                        <p class="font-semibold mb-3 text-gray-700 bg-yellow-50 p-2 rounded-lg">KPI: Tolerância à Inércia</p>
+                        <p class="text-gray-600 mb-4">Cultura de Missão Existencial. Prazos "impossíveis" são definidos para forçar a equipe a cortar burocracia imediatamente (eliminando o Ruído). Falhar por tentar rápido é aceitável; demorar por medo de falhar é inaceitável. O foco é na Densidade de Talento.</p>
+                        
+                        <!-- MELHORIA: Exemplo Prático -->
+                        <div class="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-primary flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                                </svg>
+                                Exemplo Prático:
+                            </h4>
+                            <p class="text-sm">Para resolver a crise de produção do Model 3, Musk estabeleceu a meta de produzir 5.000 carros por semana em poucos meses - algo considerado impossível pela indústria.</p>
+                        </div>
+                        
+                        <!-- MELHORIA: Ferramenta de Implementação -->
+                        <div class="mt-4 p-4 bg-green-50 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-primary flex items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                Como Implementar:
+                            </h4>
+                            <ul class="list-disc ml-5 text-sm space-y-1">
+                                <li>Estabeleça prazos 50% mais curtos que o "razoável"</li>
+                                <li>Premie tentativas rápidas, mesmo que falhem</li>
+                                <li>Elimine processos de aprovação que atrasam decisões</li>
+                                <li>Crie um "Hall da Fama" para quem resolve problemas rapidamente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção II: Execução - O Algoritmo de 5 Passos -->
+        <section class="mb-12 border-b border-gray-300 pb-4 fade-in">
+            <button onclick="toggleSection('section2')" class="w-full text-left flex justify-between items-center text-2xl md:text-3xl font-bold text-gray-700 hover:text-primary transition duration-300 py-4">
+                <h2 class="flex items-center">
+                    <span class="mr-3"></span>
+                    II. Execução: O Algoritmo de 5 Passos (O Método)
+                </h2>
+                <span id="arrow2" class="transition-transform duration-300 text-primary text-2xl">&gt;</span>
+            </button>
+
+            <div id="section2" class="collapse-content active pt-4">
+                <div class="mb-6 p-4 bg-yellow-50 rounded-lg border border-yellow-200">
+                    <p class="text-gray-700 italic flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2 text-yellow-600" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        <strong>Atenção:</strong> A ordem dos passos é inegociável. Comece sempre pelos Primeiros Princípios.
+                    </p>
+                </div>
+
+                <div class="relative space-y-6">
+                    
+                    <!-- Linha de Conexão Vertical -->
+                    <div class="absolute left-4 top-0 bottom-0 w-1 bg-primary/30 hidden sm:block"></div>
+
+                    <!-- Passo 1 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md flex items-start space-x-4 relative border border-gray-200 hover:border-primary/30 transition">
+                        <span class="text-3xl font-extrabold text-primary pt-1 sm:z-10 sm:bg-white sm:rounded-full sm:border sm:border-primary/20 sm:p-2">1.</span>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-800">Questionar cada Requisito <span class="text-sm font-normal text-gray-600">(O Desafio da Fé)</span></h3>
+                            <p class="text-gray-600 mt-2"><strong>Ação:</strong> Desafiar toda premissa. Quem disse que precisamos disso? Eliminar requisitos que existam apenas por inércia ou burocracia. Ex: Deletar o sensor de chuva dedicado, usando a câmera existente.</p>
+                            
+                            <!-- MELHORIA: Perguntas para sua equipe -->
+                            <div class="mt-4 p-3 bg-blue-50 rounded-lg border border-blue-200">
+                                <p class="text-sm font-medium text-primary flex items-center mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd" />
+                                    </svg>
+                                    Pergunte à sua equipe:
+                                </p>
+                                <ul class="list-disc ml-5 text-xs space-y-1">
+                                    <li>Este requisito existe por uma razão válida ou apenas porque "sempre foi assim"?</li>
+                                    <li>O que aconteceria se eliminássemos este requisito completamente?</li>
+                                    <li>Quem seria impactado e como mediríamos esse impacto?</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Passo 2 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md flex items-start space-x-4 relative border border-gray-200 hover:border-primary/30 transition">
+                        <span class="text-3xl font-extrabold text-primary pt-1 sm:z-10 sm:bg-white sm:rounded-full sm:border sm:border-primary/20 sm:p-2">2.</span>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-800">Deletar Peças ou Processos <span class="text-sm font-normal text-gray-600">(O Teste do Vazio)</span></h3>
+                            <p class="text-gray-600 mt-2"><strong>Ação:</strong> Remover o máximo possível. Se você não está sendo forçado a colocar 10% de volta, não deletou o suficiente. Ex: Eliminar o chicote de fiação complexa de um veículo.</p>
+                            
+                            <!-- MELHORIA: Exercício prático -->
+                            <div class="mt-4 p-3 bg-yellow-50 rounded-lg border border-yellow-200">
+                                <p class="text-sm font-medium text-primary flex items-center mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                                    </svg>
+                                    Exercício prático:
+                                </p>
+                                <p class="text-xs">Liste 10 processos/componentes e elimine 7. Só readicione os absolutamente essenciais.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Passo 3 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md flex items-start space-x-4 relative border border-gray-200 hover:border-primary/30 transition">
+                        <span class="text-3xl font-extrabold text-primary pt-1 sm:z-10 sm:bg-white sm:rounded-full sm:border sm:border-primary/20 sm:p-2">3.</span>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-800">Simplificar e Otimizar <span class="text-sm font-normal text-gray-600">(O Polimento Essencial)</span></h3>
+                            <p class="text-gray-600 mt-2"><strong>Ação:</strong> Somente agora, melhorar o que sobrou. Reduzir múltiplos componentes a uma única peça fundida. Ex: Usar a Giga Press para fundir 70 peças traseiras do carro em 1.</p>
+                            
+                            <!-- MELHORIA: Métrica de sucesso -->
+                            <div class="mt-4 p-3 bg-green-50 rounded-lg border border-green-200">
+                                <p class="text-sm font-medium text-primary flex items-center mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                                    </svg>
+                                    Métrica de sucesso:
+                                </p>
+                                <p class="text-xs">Redução de pelo menos 30% em peças/etapas após a simplificação.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Passo 4 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md flex items-start space-x-4 relative border border-gray-200 hover:border-primary/30 transition">
+                        <span class="text-3xl font-extrabold text-primary pt-1 sm:z-10 sm:bg-white sm:rounded-full sm:border sm:border-primary/20 sm:p-2">4.</span>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-800">Acelerar o Tempo de Ciclo <span class="text-sm font-normal text-gray-600">(A Velocidade da Luz)</span></h3>
+                            <p class="text-gray-600 mt-2"><strong>Ação:</strong> Reduzir o tempo entre (Ideia -> Teste -> Falha -> Correção). Focar em <strong>Iterações por Semana</strong>, não em perfeição. Ex: Testes rápidos e controlados do Motor Raptor da SpaceX.</p>
+                            
+                            <!-- MELHORIA: Meta mensurável -->
+                            <div class="mt-4 p-3 bg-green-50 rounded-lg border border-green-200">
+                                <p class="text-sm font-medium text-primary flex items-center mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z" clip-rule="evenodd" />
+                                    </svg>
+                                    Meta mensurável:
+                                </p>
+                                <p class="text-xs">Aumentar em 3x o número de ciclos de iteração no próximo trimestre.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Passo 5 -->
+                    <div class="bg-white p-5 rounded-lg shadow-md flex items-start space-x-4 relative border border-gray-200 hover:border-primary/30 transition">
+                        <span class="text-3xl font-extrabold text-primary pt-1 sm:z-10 sm:bg-white sm:rounded-full sm:border sm:border-primary/20 sm:p-2">5.</span>
+                        <div class="flex-1">
+                            <h3 class="text-xl font-semibold text-gray-800">Automatizar <span class="text-sm font-normal text-gray-600">(O Último Passo)</span></h3>
+                            <p class="text-gray-600 mt-2"><strong>Ação:</strong> Automatizar apenas o processo que já está simples, rápido e eficiente. <strong>Não automatize o caos.</strong> Ex: O erro corrigido do Model 3 ao automatizar processos não maduros.</p>
+                            
+                            <!-- MELHORIA: Critério de automação -->
+                            <div class="mt-4 p-3 bg-green-50 rounded-lg border border-green-200">
+                                <p class="text-sm font-medium text-primary flex items-center mb-2">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd" />
+                                    </svg>
+                                    Critério para automação:
+                                </p>
+                                <p class="text-xs">O processo foi executado manualmente com sucesso por pelo menos 20 ciclos consecutivos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MELHORIA: Checklist de implementação -->
+                <div class="mt-8 p-6 bg-white rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-xl font-bold text-primary mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                        Checklist de Implementação do Algoritmo
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-lg mb-3 text-primary flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clip-rule="evenodd" />
+                                </svg>
+                                Para a próxima semana:
+                            </h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-2 h-5 w-5 text-primary rounded border-gray-300 focus:ring-primary">
+                                    <span class="text-sm">Identificar 3 requisitos para questionar</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-2 h-5 w-5 text-primary rounded border-gray-300 focus:ring-primary">
+                                    <span class="text-sm">Eliminar 1 processo ou reunião desnecessária</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-2 h-5 w-5 text-primary rounded border-gray-300 focus:ring-primary">
+                                    <span class="text-sm">Mapear tempo atual de 1 ciclo importante</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-lg mb-3 text-primary flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                                </svg>
+                                Para o próximo mês:
+                            </h4>
+                            <ul class="space-y-2">
+                                <li class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-2 h-5 w-5 text-primary rounded border-gray-300 focus:ring-primary">
+                                    <span class="text-sm">Reduzir em 25% o tempo de 1 ciclo principal</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-2 h-5 w-5 text-primary rounded border-gray-300 focus:ring-primary">
+                                    <span class="text-sm">Simplificar 1 produto/processo complexo</span>
+                                </li>
+                                <li class="flex items-start">
+                                    <input type="checkbox" class="mt-1 mr-2 h-5 w-5 text-primary rounded border-gray-300 focus:ring-primary">
+                                    <span class="text-sm">Testar 1 automação em processo maduro</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção III: Parâmetros Não-Clássicos (KPIs de Engenharia) -->
+        <section class="mb-12 border-b border-gray-300 pb-4 fade-in">
+            <button onclick="toggleSection('section3')" class="w-full text-left flex justify-between items-center text-2xl md:text-3xl font-bold text-gray-700 hover:text-primary transition duration-300 py-4">
+                <h2 class="flex items-center">
+                    <span class="mr-3"></span>
+                    III. Parâmetros Práticos (KPIs de Engenharia)
+                </h2>
+                <span id="arrow3" class="transition-transform duration-300 text-primary text-2xl">&gt;</span>
+            </button>
+            
+            <div id="section3" class="collapse-content active pt-4">
+                <div class="grid md:grid-cols-3 gap-8">
+
+                    <!-- KPI 1: Índice de Idiota -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-primary/20 hover:shadow-lg transition">
+                        <h3 class="text-xl font-bold text-primary mb-3 flex items-center">
+                            <span class="mr-2"></span> 
+                            1. O "Índice de Idiota"
+                        </h3>
+                        <p class="text-gray-700 font-semibold bg-red-50 p-2 rounded-lg mb-3">Mede: Eficiência de Custo</p>
+                        <p class="text-gray-600 mb-4"><strong>Prática:</strong> Razão (Custo Final do Componente / Custo das Matérias-Primas). Se o índice é alto, o fornecedor ou o processo interno é burro. A solução é geralmente a Verticalização.</p>
+                        
+                        <!-- MELHORIA: Calculadora simples -->
+                        <div class="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-primary text-sm mb-3 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M6 2a2 2 0 00-2 2v12a2 2 0 002 2h8a2 2 0 002-2V4a2 2 0 00-2-2H6zm1 2a1 1 0 000 2h6a1 1 0 100-2H7zm6 7a1 1 0 00-1 1v1H7v-1a1 1 0 00-2 0v1a2 2 0 002 2h6a2 2 0 002-2v-1a1 1 0 00-1-1z" clip-rule="evenodd" />
+                                </svg>
+                                Calcule seu Índice:
+                            </h4>
+                            <div class="space-y-3">
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Custo Final do Componente (R$)</label>
+                                    <input type="number" id="custo-final" placeholder="Ex: 150" class="w-full p-2 text-sm border rounded focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-medium text-gray-700 mb-1">Custo Matéria-Prima (R$)</label>
+                                    <input type="number" id="custo-materia" placeholder="Ex: 50" class="w-full p-2 text-sm border rounded focus:ring-2 focus:ring-primary focus:border-transparent">
+                                </div>
+                            </div>
+                            <button onclick="calcularIndiceIdiota()" class="mt-3 w-full bg-primary text-white py-2 rounded font-medium hover:bg-primary/90 transition flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z" clip-rule="evenodd" />
+                                </svg>
+                                Calcular Índice
+                            </button>
+                            <p id="resultado-indice" class="text-sm mt-3 font-medium p-2 rounded hidden"></p>
+                        </div>
+                    </div>
+
+                    <!-- KPI 2: Relação Sinal-Ruído -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-primary/20 hover:shadow-lg transition">
+                        <h3 class="text-xl font-bold text-primary mb-3 flex items-center">
+                            <span class="mr-2"></span> 
+                            2. Relação Sinal-Ruído
+                        </h3>
+                        <p class="text-gray-700 font-semibold bg-purple-50 p-2 rounded-lg mb-3">Mede: Eficácia da Comunicação e Burocracia</p>
+                        <p class="text-gray-600 mb-4"><strong>Prática:</strong> Maximizar o <strong>Sinal</strong> (Atividades que agregam valor direto ao produto) e eliminar o <strong>Ruído</strong> (Reuniões de status, relatórios excessivos, hierarquia). Ex: A Regra da Saída da Reunião.</p>
+                        
+                        <!-- MELHORIA: Avaliação rápida -->
+                        <div class="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-primary text-sm mb-3 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z" />
+                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd" />
+                                </svg>
+                                Avalie sua Semana:
+                            </h4>
+                            <p class="text-xs text-gray-600 mb-3">Que porcentagem do seu tempo foi gasto em trabalho que agrega valor direto (Sinal)?</p>
+                            <div class="mb-2">
+                                <div class="flex justify-between text-sm font-medium mb-1">
+                                    <span class="text-gray-700">Sinal (trabalho direto)</span>
+                                    <span id="sinal-value" class="text-primary">50%</span>
+                                </div>
+                                <input type="range" min="0" max="100" value="50" class="w-full mt-1 accent-primary" id="sinal-slider">
+                            </div>
+                            <div class="flex justify-between text-xs text-gray-600">
+                                <span>Ruído (burocracia)</span>
+                                <span id="ruido-value">50%</span>
+                            </div>
+                            <p class="text-xs mt-3 font-medium p-2 rounded bg-white border" id="sinal-assessment"></p>
+                        </div>
+                    </div>
+
+                    <!-- KPI 3: Tempo de Ciclo de Iteração -->
+                    <div class="bg-white p-6 rounded-xl shadow-md border border-primary/20 hover:shadow-lg transition">
+                        <h3 class="text-xl font-bold text-primary mb-3 flex items-center">
+                            <span class="mr-2"></span> 
+                            3. Tempo de Ciclo de Iteração
+                        </h3>
+                        <p class="text-gray-700 font-semibold bg-green-50 p-2 rounded-lg mb-3">Mede: Velocidade de Aprendizado</p>
+                        <p class="text-gray-600 mb-4"><strong>Prática:</strong> Tempo entre (Ideia -> Teste -> Falha -> Correção). Focar em reduzir o tempo de ciclo para semanas, não anos. É o oposto de planejar para a perfeição; é planejar para o aprendizado rápido.</p>
+                        
+                        <!-- MELHORIA: Benchmarking -->
+                        <div class="mt-4 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-primary text-sm mb-3 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z" clip-rule="evenodd" />
+                                </svg>
+                                Benchmarking:
+                            </h4>
+                            <ul class="text-xs space-y-2 mb-4">
+                                <li class="flex items-start">
+                                    <span class="font-bold text-primary mr-2">•</span>
+                                    <span><strong>SpaceX:</strong> Ciclos de teste de motor - <strong class="text-green-600">Semanas</strong></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-bold text-primary mr-2">•</span>
+                                    <span><strong>Tesla:</strong> Atualizações de software - <strong class="text-green-600">Dias/Semanas</strong></span>
+                                </li>
+                                <li class="flex items-start">
+                                    <span class="font-bold text-primary mr-2">•</span>
+                                    <span><strong>Indústria tradicional:</strong> Desenvolvimento de produtos - <strong class="text-red-600">Anos</strong></span>
+                                </li>
+                            </ul>
+                            <div class="mt-2">
+                                <p class="text-xs font-medium text-gray-700 mb-2">Seu ciclo principal atual:</p>
+                                <select id="ciclo-tempo" class="w-full p-2 text-sm border rounded focus:ring-2 focus:ring-primary focus:border-transparent">
+                                    <option value="dias">Dias</option>
+                                    <option value="semanas" selected>Semanas</option>
+                                    <option value="meses">Meses</option>
+                                    <option value="anos">Anos</option>
+                                </select>
+                                <p id="ciclo-assessment" class="text-xs mt-2 p-2 rounded bg-white border hidden"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- MELHORIA: Painel de métricas -->
+                <div class="mt-8 p-6 bg-white rounded-lg shadow-md border border-gray-200">
+                    <h3 class="text-xl font-bold text-primary mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                            <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                        </svg>
+                        Painel de Métricas Musk
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-blue-50 p-4 rounded-lg border border-blue-200">
+                            <h4 class="font-bold text-lg mb-3 text-primary">Métricas de Input (O que medir)</h4>
+                            <ul class="list-disc ml-5 text-sm space-y-2">
+                                <li>Índice de Idiota por produto/componente</li>
+                                <li>Horas de Sinal vs Ruído por semana</li>
+                                <li>Tempo de ciclo de iteração por projeto</li>
+                                <li>Número de aprovações necessárias por decisão</li>
+                                <li>Densidade de talento por equipe</li>
+                            </ul>
+                        </div>
+                        <div class="bg-green-50 p-4 rounded-lg border border-green-200">
+                            <h4 class="font-bold text-lg mb-3 text-primary">Métricas de Output (Resultados)</h4>
+                            <ul class="list-disc ml-5 text-sm space-y-2">
+                                <li>Custo reduzido por unidade (após verticalização)</li>
+                                <li>Velocidade de lançamento de produtos</li>
+                                <li>Número de iterações por trimestre</li>
+                                <li>Taxa de problemas resolvidos em primeira tentativa</li>
+                                <li>Redução de complexidade (peças/processos)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NOVA SEÇÃO: Implementação Prática -->
+        <section class="mb-12 border-b border-gray-300 pb-4 fade-in">
+            <button onclick="toggleSection('section4')" class="w-full text-left flex justify-between items-center text-2xl md:text-3xl font-bold text-gray-700 hover:text-primary transition duration-300 py-4">
+                <h2 class="flex items-center">
+                    <span class="mr-3"></span>
+                    IV. Roteiro de Implementação
+                </h2>
+                <span id="arrow4" class="transition-transform duration-300 text-primary text-2xl">&gt;</span>
+            </button>
+
+            <div id="section4" class="collapse-content active pt-4">
+                <div class="bg-white p-6 rounded-xl shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12 1.586l-4 4v12.828l4-4V1.586zM3.707 3.293A1 1 0 002 4v10a1 1 0 00.293.707L6 18.414V5.586L3.707 3.293zM17.707 5.293A1 1 0 0118 6v10a1 1 0 01-.293.707L16 18.414v-12.828l1.707-1.293z" clip-rule="evenodd" />
+                        </svg>
+                        Plano de 90 Dias para Implementação
+                    </h3>
+                    
+                    <div class="space-y-8">
+                        <!-- Semana 1-2 -->
+                        <div class="border-l-4 border-green-500 pl-5 py-3 bg-green-50 rounded-r-lg">
+                            <h4 class="font-bold text-xl mb-3 text-gray-800 flex items-center">
+                                <span class="bg-green-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">1-2</span>
+                                Semanas 1-2: Diagnóstico e Alinhamento
+                            </h4>
+                            <ul class="list-disc ml-5 mt-2 text-gray-700 space-y-2">
+                                <li>Mapear todos os processos atuais e tempos de ciclo</li>
+                                <li>Identificar os 3 maiores "ruídos" na organização</li>
+                                <li>Estabelecer North Star Metric para a empresa</li>
+                                <li>Comunicar nova mentalidade a toda equipe</li>
+                                <li>Formar um "Comitê de Aceleração" com os melhores talentos</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Semana 3-6 -->
+                        <div class="border-l-4 border-blue-500 pl-5 py-3 bg-blue-50 rounded-r-lg">
+                            <h4 class="font-bold text-xl mb-3 text-gray-800 flex items-center">
+                                <span class="bg-blue-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">3-6</span>
+                                Semanas 3-6: Eliminação de Complexidade
+                            </h4>
+                            <ul class="list-disc ml-5 mt-2 text-gray-700 space-y-2">
+                                <li>Aplicar Passo 1 (Questionar Requisitos) em 2 produtos/processos</li>
+                                <li>Eliminar pelo menos 30% das reuniões regulares</li>
+                                <li>Reduzir camadas de aprovação em 50%</li>
+                                <li>Implementar a "Regra da Saída" em todas as reuniões</li>
+                                <li>Identificar e eliminar os 5 maiores desperdícios</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Semana 7-12 -->
+                        <div class="border-l-4 border-purple-500 pl-5 py-3 bg-purple-50 rounded-r-lg">
+                            <h4 class="font-bold text-xl mb-3 text-gray-800 flex items-center">
+                                <span class="bg-purple-500 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3">7-12</span>
+                                Semanas 7-12: Aceleração e Iteração
+                            </h4>
+                            <ul class="list-disc ml-5 mt-2 text-gray-700 space-y-2">
+                                <li>Reduzir tempo de ciclo principal em 25%</li>
+                                <li>Implementar 2 ciclos de feedback rápido por semana</li>
+                                <li>Testar 1 processo de automação em área madura</li>
+                                <li>Revisar e ajustar métricas com base em resultados</li>
+                                <li>Expandir metodologia para mais áreas da empresa</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 p-5 bg-yellow-50 rounded-lg border border-yellow-300">
+                        <h4 class="font-bold text-xl text-primary mb-4 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd" />
+                            </svg>
+                            Armadilhas Comuns e Como Evitá-las
+                        </h4>
+                        <ul class="list-disc ml-5 mt-2 text-gray-700 space-y-3">
+                            <li><strong>Resistência cultural:</strong> Comunique o "porquê" antes do "o que" - mostre dados de eficiência e crie histórias de sucesso rápidas.</li>
+                            <li><strong>Excesso no início:</strong> Comece com um piloto em uma área, não em toda empresa. Escolha uma área com maior potencial de sucesso.</li>
+                            <li><strong>Falta de métricas:</strong> Estabeleça KPIs claros desde o dia 1 e revise semanalmente.</li>
+                            <li><strong>Burnout:</strong> Equilibre urgência com pausas estratégicas e celebração de vitórias. Musk trabalha muito, mas também descansa quando necessário.</li>
+                            <li><strong>Falta de alinhamento:</strong> Realize reuniões curtas diárias para garantir que todos estão na mesma direção.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção V: Checklist de Debate -->
+        <section class="mb-12 fade-in">
+            <button onclick="toggleSection('section5')" class="w-full text-left flex justify-between items-center text-2xl md:text-3xl font-bold text-gray-700 hover:text-primary transition duration-300 py-4">
+                <h2 class="flex items-center">
+                    <span class="mr-3"></span>
+                    V. Checklist de Conclusão e Debate
+                </h2>
+                <span id="arrow5" class="transition-transform duration-300 text-primary text-2xl">&gt;</span>
+            </button>
+
+            <div id="section5" class="collapse-content active pt-4">
+                <div class="mb-8 p-5 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200">
+                    <p class="text-lg text-primary font-semibold flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                        </svg>
+                        Use estas questões para gerar reflexão prática e debate com sua equipe:
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-3 gap-6 mb-8">
+                    <!-- Coluna A: Sustentabilidade -->
+                    <div class="bg-white p-5 rounded-lg shadow-lg border border-red-200">
+                        <h3 class="font-bold text-lg mb-3 text-red-600 border-b pb-2 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM7 9a1 1 0 000 2h6a1 1 0 100-2H7z" clip-rule="evenodd" />
+                            </svg>
+                            A. Sustentabilidade (Fator Humano)
+                        </h3>
+                        <ul class="list-disc ml-5 space-y-3 text-gray-700">
+                            <li>É possível ter a velocidade do <strong>Tempo de Ciclo de Iteração</strong> sem o alto custo de <em>burnout</em>?</li>
+                            <li>Qual o custo de perder a memória institucional ao eliminar o "talento mediano" (Densidade de Talento)?</li>
+                            <li>O sistema sobrevive sob um CEO que não seja também um Engenheiro-Chefe?</li>
+                            <li>Como balancear urgência maníaca com qualidade de vida?</li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna B: Limites da Aplicação -->
+                    <div class="bg-white p-5 rounded-lg shadow-lg border border-orange-200">
+                        <h3 class="font-bold text-lg mb-3 text-orange-600 border-b pb-2 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M13.477 14.89A6 6 0 015.11 6.524l8.367 8.368zm1.414-1.414L6.524 5.11a6 6 0 018.367 8.367zM18 10a8 8 0 11-16 0 8 8 0 0116 0z" clip-rule="evenodd" />
+                            </svg>
+                            B. Limites da Aplicação (Onde Não Funciona)
+                        </h3>
+                        <ul class="list-disc ml-5 space-y-3 text-gray-700">
+                            <li>O <strong>Algoritmo de 5 Passos</strong> é adaptável a indústrias de serviços ou setores públicos?</li>
+                            <li>Onde o <strong>Tempo de Ciclo de Iteração</strong> (teste e falha) colide com regulamentações de segurança crítica (ex: saúde, aviação)?</li>
+                            <li>Quais são os riscos de gestão da <strong>Integração Vertical</strong> extrema forçada pelo <strong>Índice de Idiota</strong>?</li>
+                            <li>Como aplicar em empresas com poucos recursos para investimento inicial?</li>
+                        </ul>
+                    </div>
+
+                    <!-- Coluna C: Governança e Ética -->
+                    <div class="bg-white p-5 rounded-lg shadow-lg border border-purple-200">
+                        <h3 class="font-bold text-lg mb-3 text-purple-600 border-b pb-2 flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
+                            </svg>
+                            C. Governança e Ética (O Fator Poder)
+                        </h3>
+                        <ul class="list-disc ml-5 space-y-3 text-gray-700">
+                            <li>A <strong>Soma de Vetores</strong> é, na prática, uma supressão de opiniões divergentes?</li>
+                            <li>Onde termina o alinhamento de missão e começa a ditadura corporativa?</li>
+                            <li>A dependência do "Risco do Homem-Chave" torna a empresa mais vulnerável a crises?</li>
+                            <li>Como garantir diversidade de pensamento em uma cultura de alta pressão?</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- MELHORIA: Plano de ação pessoal -->
+                <div class="mt-8 p-6 bg-white rounded-lg shadow-lg border border-gray-200">
+                    <h3 class="text-2xl font-bold text-primary mb-6 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 mr-3" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd" />
+                        </svg>
+                        Meu Plano de Ação Pessoal
+                    </h3>
+                    
+                    <div class="mb-6 p-4 bg-blue-50 rounded-lg border border-blue-200">
+                        <p class="text-primary font-semibold flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                            </svg>
+                             <strong>Dica Musk:</strong> Escolha apenas 3 ações. Foque em execução implacável, não em planejamento perfeito.
+                        </p>
+                    </div>
+                    
+                    <div class="grid md:grid-cols-2 gap-8">
+                        <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-5 rounded-xl border border-blue-200">
+                            <h4 class="font-bold text-xl mb-4 text-primary flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                                </svg>
+                                Para implementar na próxima semana:
+                            </h4>
+                            <textarea id="plano-acoes" class="w-full h-40 p-4 border-2 border-blue-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-gray-700 resize-none" 
+                                      placeholder="Exemplo concreto:
+1. Eliminar reunião de status de segunda-feira
+2. Testar ciclo rápido em 1 projeto piloto  
+3. Questionar 3 requisitos no produto X"></textarea>
+                            <p class="text-sm text-gray-500 mt-2 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                                Seja específico: O quê? Quando? Como?
+                            </p>
+                        </div>
+                        
+                        <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-5 rounded-xl border border-green-200">
+                            <h4 class="font-bold text-xl mb-4 text-primary flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
+                                </svg>
+                                Para medir e acompanhar:
+                            </h4>
+                            <textarea id="plano-metricas" class="w-full h-40 p-4 border-2 border-green-200 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent text-gray-700 resize-none" 
+                                      placeholder="Exemplo mensurável:
+Métrica 1: Horas de reunião reduzidas em 30%
+Métrica 2: Tempo de ciclo do projeto de 4 para 2 semanas
+Métrica 3: 2 requisitos eliminados do backlog"></textarea>
+                            <p class="text-sm text-gray-500 mt-2 flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+                                </svg>
+                                Lembre-se: Sem métrica = sem melhoria
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <button onclick="salvarPlanoLocal()" class="bg-primary text-white py-3 rounded-lg font-semibold hover:bg-primary/90 transition flex items-center justify-center text-lg shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            Salvar Meu Plano
+                        </button>
+                        <button onclick="exportarPlano()" class="bg-green-600 text-white py-3 rounded-lg font-semibold hover:bg-green-700 transition flex items-center justify-center text-lg shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                            Exportar para TXT
+                        </button>
+                    </div>
+                    
+                    <div id="confirmacao-plano" class="hidden mt-4 p-4 bg-green-100 text-green-800 rounded-lg text-center border border-green-200">
+                        <div class="flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span class="font-semibold">✅ Plano salvo localmente! Volte a qualquer momento para revisitar.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Botão Voltar ao Topo -->
+    <a href="javascript:void(0)" onclick="scrollToTop()" id="backToTop" class="fixed bottom-6 right-6 p-3 bg-primary text-white rounded-full shadow-lg hover:bg-primary/90 transition duration-300 hidden z-50">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
+        </svg>        
+    </a>
+
+    <!-- Rodapé (Footer) -->
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-center items-center text-sm md:space-x-8 text-center">
+            <p class="mb-2 md:mb-0">© 2025 Silvanio Gois - Todos os direitos reservados</p>
+            <a href="https://www.silvaniogois.com.br/" target="_blank" class="text-primary hover:text-white transition duration-300 font-semibold bg-gray-700 px-3 py-1 rounded-lg flex items-center">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 mr-1" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z" />
+                </svg>
+                Ir ao Site
+            </a>
+        </div>
+    </footer>
+
+    <script>
+        // Sistema de diagnóstico corrigido
+        let respostas = {};
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            // Inicializa as seções
+            for (let i = 1; i <= 5; i++) {
+                const content = document.getElementById('section' + i);
+                const arrow = document.getElementById('arrow' + i);
+                
+                if (content && arrow) {
+                    arrow.classList.add('rotate-90'); 
+                    content.classList.add('active');
+                }
+            }
+            
+            // Configura o slider de sinal/ruído
+            const sinalSlider = document.getElementById('sinal-slider');
+            const sinalValue = document.getElementById('sinal-value');
+            const ruidoValue = document.getElementById('ruido-value');
+            const sinalAssessment = document.getElementById('sinal-assessment');
+            
+            if (sinalSlider) {
+                sinalSlider.addEventListener('input', function() {
+                    const value = this.value;
+                    sinalValue.textContent = value + '%';
+                    ruidoValue.textContent = (100 - value) + '%';
+                    
+                    if (value >= 70) {
+                        sinalAssessment.textContent = 'Excelente! Alta eficiência. Continue assim.';
+                        sinalAssessment.className = 'text-xs mt-2 p-2 rounded bg-green-100 text-green-800 border border-green-200';
+                    } else if (value >= 50) {
+                        sinalAssessment.textContent = 'Bom, mas há espaço para melhorias. Identifique e elimine ruídos.';
+                        sinalAssessment.className = 'text-xs mt-2 p-2 rounded bg-yellow-100 text-yellow-800 border border-yellow-200';
+                    } else {
+                        sinalAssessment.textContent = 'Precisa de otimização urgente. Foque em eliminar burocracia.';
+                        sinalAssessment.className = 'text-xs mt-2 p-2 rounded bg-red-100 text-red-800 border border-red-200';
+                    }
+                });
+                
+                sinalSlider.dispatchEvent(new Event('input'));
+            }
+            
+            // Configura o seletor de ciclo de tempo
+            const cicloSelect = document.getElementById('ciclo-tempo');
+            const cicloAssessment = document.getElementById('ciclo-assessment');
+            
+            if (cicloSelect) {
+                cicloSelect.addEventListener('change', function() {
+                    const value = this.value;
+                    let message = '';
+                    
+                    if (value === 'dias') {
+                        message = '🎯 Excelente! Você está no nível Musk de velocidade.';
+                        cicloAssessment.className = 'text-xs mt-2 p-2 rounded bg-green-100 text-green-800 border border-green-200';
+                    } else if (value === 'semanas') {
+                        message = '📈 Bom, mas pode melhorar. Foque em reduzir para dias.';
+                        cicloAssessment.className = 'text-xs mt-2 p-2 rounded bg-yellow-100 text-yellow-800 border border-yellow-200';
+                    } else if (value === 'meses') {
+                        message = '⚠️ Atenção! Ciclo muito lento. Aplique o Algoritmo de 5 Passos.';
+                        cicloAssessment.className = 'text-xs mt-2 p-2 rounded bg-orange-100 text-orange-800 border border-orange-200';
+                    } else {
+                        message = '🚨 Crítico! Empresa em risco. Transformação urgente necessária.';
+                        cicloAssessment.className = 'text-xs mt-2 p-2 rounded bg-red-100 text-red-800 border border-red-200';
+                    }
+                    
+                    cicloAssessment.textContent = message;
+                    cicloAssessment.classList.remove('hidden');
+                });
+                
+                cicloSelect.dispatchEvent(new Event('change'));
+            }
+            
+            // Configura os botões de diagnóstico
+            const diagnosticButtons = document.querySelectorAll('.diagnostic-btn');
+            
+            diagnosticButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const question = this.getAttribute('data-question');
+                    const value = parseInt(this.getAttribute('data-value'));
+                    
+                    // Remove seleção anterior da mesma pergunta
+                    document.querySelectorAll(`.diagnostic-btn[data-question="${question}"]`).forEach(btn => {
+                        btn.classList.remove('bg-primary', 'text-white');
+                        btn.classList.add('bg-gray-200', 'text-gray-800');
+                    });
+                    
+                    // Seleciona atual
+                    this.classList.remove('bg-gray-200', 'text-gray-800');
+                    this.classList.add('bg-primary', 'text-white');
+                    
+                    // Atualiza respostas
+                    respostas[question] = value;
+                    
+                    // Verifica se todas as perguntas foram respondidas
+                    if (Object.keys(respostas).length === 3) {
+                        showDiagnosticResult();
+                    }
+                });
+            });
+            
+            // Carrega plano salvo se existir
+            carregarPlanoSalvo();
+        });
+        
+        function showDiagnosticResult() {
+            const diagnosticScore = Object.values(respostas).reduce((sum, val) => sum + val, 0);
+            const resultDiv = document.getElementById('diagnostic-result');
+            const resultText = document.getElementById('result-text');
+            const progressFill = document.getElementById('progress-fill');
+            const progressText = document.getElementById('progress-text');
+            const recommendationsDiv = document.getElementById('recommendations');
+            
+            let message = '';
+            let progress = 0;
+            let recommendations = [];
+            
+            if (diagnosticScore <= 3) {
+                message = 'Sua organização já tem características alinhadas com a metodologia Musk. Foque em refinamento e aceleração.';
+                progress = 80;
+                recommendations = [
+                    'Aplique o Algoritmo de 5 Passos em áreas críticas',
+                    'Experimente verticalização em componentes-chave',
+                    'Estabeleça metas de redução de ciclo ainda mais agressivas'
+                ];
+            } else if (diagnosticScore <= 6) {
+                message = 'Há espaço significativo para melhorias. Implemente o Algoritmo de 5 Passos para eliminar complexidade.';
+                progress = 50;
+                recommendations = [
+                    'Comece eliminando burocracia (Passo 2)',
+                    'Estabeleça um North Star Metric claro',
+                    'Reduza camadas hierárquicas em 50%'
+                ];
+            } else {
+                message = 'Sua organização precisa de transformação radical. Comece pela Cultura (Seção I) e pelo Diagnóstico detalhado.';
+                progress = 20;
+                recommendations = [
+                    'Foque na Cultura e Alinhamento primeiro',
+                    'Identifique e elimine os 3 maiores ruídos',
+                    'Estabeleça prazos 50% mais curtos para tudo'
+                ];
+            }
+            
+            resultText.textContent = message;
+            progressFill.style.width = progress + '%';
+            progressText.textContent = progress + '%';
+            
+            // Adiciona recomendações
+            recommendationsDiv.innerHTML = '<h4 class="font-bold text-primary mb-2">Recomendações de Ação:</h4>' +
+                recommendations.map(rec => 
+                    `<div class="flex items-start mb-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-primary mr-2 mt-0.5 flex-shrink-0" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+                        </svg>
+                        <span>${rec}</span>
+                    </div>`
+                ).join('');
+            
+            resultDiv.classList.remove('hidden');
+            
+            // Scroll para o resultado
+            resultDiv.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+
+        // Função para alternar seções
+        function toggleSection(id) {
+            const content = document.getElementById(id);
+            const arrow = document.getElementById('arrow' + id.slice(-1));
+
+            if (content.classList.contains('active')) {
+                content.classList.remove('active');
+                arrow.classList.remove('rotate-90');
+            } else {
+                content.classList.add('active');
+                arrow.classList.add('rotate-90');
+            }
+        }
+
+        // Função para rolar para o topo
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Mostrar/esconder botão "Voltar ao Topo"
+        const backToTopButton = document.getElementById('backToTop');
+        window.onscroll = function() {
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                backToTopButton.classList.remove('hidden');
+            } else {
+                backToTopButton.classList.add('hidden');
+            }
+        };
+
+        // Calculadora do Índice de Idiota
+        function calcularIndiceIdiota() {
+            const custoFinal = parseFloat(document.getElementById('custo-final').value);
+            const custoMateria = parseFloat(document.getElementById('custo-materia').value);
+            
+            if (isNaN(custoFinal) || isNaN(custoMateria) || custoMateria === 0) {
+                alert('Por favor, insira valores válidos para ambos os campos.');
+                return;
+            }
+            
+            const indice = custoFinal / custoMateria;
+            const resultado = document.getElementById('resultado-indice');
+            
+            let mensagem = '';
+            
+            if (indice < 2) {
+                mensagem = `Seu Índice de Idiota é: ${indice.toFixed(2)}. Excelente! Eficiência alta.`;
+                resultado.className = 'text-sm mt-2 font-medium p-2 rounded bg-green-100 text-green-800 border border-green-200';
+            } else if (indice < 5) {
+                mensagem = `Seu Índice de Idiota é: ${indice.toFixed(2)}. Bom, mas há espaço para melhorias. Considere verticalização.`;
+                resultado.className = 'text-sm mt-2 font-medium p-2 rounded bg-yellow-100 text-yellow-800 border border-yellow-200';
+            } else {
+                mensagem = `Seu Índice de Idiota é: ${indice.toFixed(2)}. Alerta! Eficiência muito baixa. Verticalização urgente necessária.`;
+                resultado.className = 'text-sm mt-2 font-medium p-2 rounded bg-red-100 text-red-800 border border-red-200';
+            }
+            
+            resultado.textContent = mensagem;
+            resultado.classList.remove('hidden');
+        }
+
+        // Funções para o Plano de Ação Pessoal
+        function salvarPlanoLocal() {
+            const acoes = document.getElementById('plano-acoes').value;
+            const metricas = document.getElementById('plano-metricas').value;
+            
+            const plano = {
+                acoes: acoes,
+                metricas: metricas,
+                dataCriacao: new Date().toLocaleDateString('pt-BR')
+            };
+            
+            localStorage.setItem('planoAcaoMusk', JSON.stringify(plano));
+            
+            const confirmacao = document.getElementById('confirmacao-plano');
+            confirmacao.classList.remove('hidden');
+            
+            setTimeout(() => {
+                confirmacao.classList.add('hidden');
+            }, 5000);
+        }
+
+        function carregarPlanoSalvo() {
+            const planoSalvo = localStorage.getItem('planoAcaoMusk');
+            if (planoSalvo) {
+                const plano = JSON.parse(planoSalvo);
+                document.getElementById('plano-acoes').value = plano.acoes;
+                document.getElementById('plano-metricas').value = plano.metricas;
+                
+                const textareas = document.querySelectorAll('#plano-acoes, #plano-metricas');
+                textareas.forEach(ta => {
+                    ta.classList.add('border-green-400', 'bg-green-50');
+                });
+            }
+        }
+
+        function exportarPlano() {
+            const acoes = document.getElementById('plano-acoes').value || "[Não preenchido]";
+            const metricas = document.getElementById('plano-metricas').value || "[Não preenchido]";
+            
+            const conteudo = `
+MEU PLANO DE AÇÃO - METODOLOGIA ELON MUSK
+=========================================
+
+Data: ${new Date().toLocaleDateString('pt-BR')}
+
+AÇÕES PARA PRÓXIMA SEMANA:
+${acoes}
+
+MÉTRICAS PARA ACOMPANHAR:
+${metricas}
+
+PRINCÍPIOS MUSK PARA LEMBRAR:
+- Questionar cada requisito
+- Eliminar burocracia
+- Simplificar antes de automatizar
+- Focar em iterações rápidas
+- Manter alinhamento total com o objetivo
+
+--- 
+Gerado pelo Framework de Gestão Hardcore
+Silvanio Gois - https://www.silvaniogois.com.br/
+            `;
+            
+            const blob = new Blob([conteudo], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `Plano-Acao-Musk-${new Date().toLocaleDateString('pt-BR').replace(/\//g, '-')}.txt`;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</body>
+</html>
